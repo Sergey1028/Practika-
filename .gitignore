@@ -1,32 +1,32 @@
-# Prerequisites
-*.d
+#include <iostream>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+int main() {
+    double a, b;
+    char operation;
 
-# Precompiled Headers
-*.gch
-*.pch
+    std::cout << "Enter a double value: ";
+    std::cin >> a;
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+    std::cout << "Enter a double value: ";
+    std::cin >> b;
 
-# Fortran module files
-*.mod
-*.smod
+    std::cout << "Enter one of the following: +, -, *, or /:  ";
+    std::cin >> operation;
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+    switch (operation) {
+    case '+':
+        std::cout << a << " + " << b << " is " << a + b << "\n";
+        break;
+    case '-':
+        std::cout << a << " - " << b << " is " << a - b << "\n";
+        break;
+    case '*':
+        std::cout << a << " * " << b << " is " << a * b << "\n";
+        break;
+    case '/':
+        std::cout << a << " / " << b << " is " << a / b << "\n";
+        break;
+    }
 
-# Executables
-*.exe
-*.out
-*.app
+    return 0;
+}
